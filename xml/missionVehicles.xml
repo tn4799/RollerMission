@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<missionVehicles>
+    <mission type="roll">
+        <group fieldSize="small">
+            <vehicle filename="$data/vehicles/claas/arion600/arion600.xml" > <!-- tractor -->
+                <configuration name="motor" id="3" />
+            </vehicle>
+            <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller -->
+        </group>
+
+        <group fieldSize="small">
+            <vehicle filename="$data/vehicles/zetor/crystal/crystal.xml" /> <!-- tractor -->
+            <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller -->
+        </group>
+
+        <group fieldSize="medium">
+            <vehicle filename="$data/vehicles/deutzFahr/series7/series7.xml"/>
+            <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller -->
+        </group>
+
+        <group fieldSize="medium">
+            
+            <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller -->
+        </group>
+
+        <group fieldSize="medium">
+            <vehicle filename="$data/vehicles/masseyFerguson/series8S/series8S.xml" >
+                <configuration name="motor" id="5"/>
+            </vehicle>
+            <vehicle filename="$data/vehicles/tenwinkel/weight1500/weight1500.xml" />
+            <vehicle filename="$data/vehicles/dalbo/megaRoll2430/megaRoll2430.xml" /> <!-- roller -->
+        </group>
+
+        <group fieldSize="large">
+            <vehicle filename="$data/vehicles/newHolland/t8/t8.xml">
+                <configuration name="motor" id="2"/>
+            </vehicle>
+            <vehicle filename="$data/vehicles/dalbo/megaRoll2430/megaRoll2430.xml" /> <!-- roller -->
+        </group>
+
+        <group fieldSize="large">
+            <vehicle filename="$data/vehicles/johnDeere/series8R/series8R.xml"/>
+            <vehicle filename="$data/vehicles/dalbo/megaRoll2430/megaRoll2430.xml" /> <!-- roller -->
+        </group>
+
+        <group fieldSize="large">
+            <vehicle filename="$data/vehicles/johnDeere/series8R/series8R.xml"/> <!-- tractor big -->
+            <vehicle filename="$data/vehicles/johnDeere/series4755/series4755.xml"/> <!-- tractor small -->
+            <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller small -->
+            <vehicle filename="$data/vehicles/dalbo/megaRoll2430/megaRoll2430.xml" /> <!-- roller big -->
+        </group>
+    </mission>
+</missionVehicles>
