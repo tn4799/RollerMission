@@ -44,9 +44,9 @@ function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlo
         return false
     end
 
-    local area, _ = FieldUtil.getFruitArea(x - 1, z - 1, x + 1, z - 1, x - 1, z + 1, {}, {}, fruitType, fruitDesc.minPreparingGrowthState, fruitDesc.maxPreparingGrowthState, 0, 0, 0, false)
+    local area, _ = FieldUtil.getFruitArea(x - 1, z - 1, x + 1, z - 1, x - 1, z + 1, {}, {}, fruitType, 1, 1, 0, 0, 0, false)
 
-    if area > 0 then
+    if area > 0 and fruitDesc.needsRolling then
         return true, FieldManager.FIELDSTATE_GROWING
     end
 
