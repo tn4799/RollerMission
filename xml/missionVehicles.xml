@@ -3,7 +3,8 @@
     <mission type="roll">
         <group fieldSize="small">
             <vehicle filename="$data/vehicles/claas/arion600/arion600.xml" > <!-- tractor -->
-                <configuration name="motor" id="3" />
+                <configuration name="motor" id="3"/>
+                <configuration name="wheel" id="TRELLEBORG_BROAD_WEIGHTS"/>
             </vehicle>
             <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller -->
         </group>
@@ -19,13 +20,17 @@
         </group>
 
         <group fieldSize="medium">
-            
+            <vehicle filename="$data/vehicles/caseIH/maxxum145CVX/maxxum145CVX.xml" >
+                <configuration name="motor" id="4"/>
+                <configuration name="wheel" id="TRELLEBORG_BROAD_WEIGHTS"/>
+            </vehicle>
             <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller -->
         </group>
 
         <group fieldSize="medium">
             <vehicle filename="$data/vehicles/masseyFerguson/series8S/series8S.xml" >
-                <configuration name="motor" id="5"/>
+                <configuration name="motor" id="6"/>
+                <configuration name="wheel" id="TRELLEBORG_BROAD_WEIGHTS2"/>
             </vehicle>
             <vehicle filename="$data/vehicles/tenwinkel/weight1500/weight1500.xml" />
             <vehicle filename="$data/vehicles/dalbo/megaRoll2430/megaRoll2430.xml" /> <!-- roller -->
@@ -33,7 +38,7 @@
 
         <group fieldSize="large">
             <vehicle filename="$data/vehicles/newHolland/t8/t8.xml">
-                <configuration name="motor" id="2"/>
+                <configuration name="motor" id="3"/>
             </vehicle>
             <vehicle filename="$data/vehicles/dalbo/megaRoll2430/megaRoll2430.xml" /> <!-- roller -->
         </group>
