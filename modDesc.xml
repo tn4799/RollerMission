@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="61">
+    <author>tn4799, Tensuko</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Roller Missions</en>
+        <de>Walzmissionen</de>
+    </title>
+
+    <description>
+        <en><![CDATA[This mod adds roller missions into the game. A roller mission can be generated after a field had been sown.]]></en>
+		<de><![CDATA[Dieser Mod fügt Walzmissionen zu den Missionen hinzu. Walzenmissionen können nach dem Ansähen eines Feldes generiert werden.]]></de>
+    </description>
+    <iconFilename>modIcon.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <extraSourceFiles>
+        <sourceFile filename="src/RollerMission.lua"/>
+        <sourceFile filename="src/RegisterRollerMissionVehicles.lua"/>
+    </extraSourceFiles>
+
+    <l10n>
+        <text name="FieldJob_jobType_rolling">
+            <en>Rolling</en>
+            <de>Walzen</de>
+        </text>
+        <text name="FieldJob_desc_action_rolling">
+			<en>for rolling/</en>
+			<de>zum Walzen</de>
+		</text>
+        <text name="FieldJob_desc_rolling">
+            <en>Roll field %d to compress the soil after seeding to increase the yield."</en>
+            <de>Walze das Feld %d, um die Erde nach der Aussaat zu verdichten und dadurch den Ertrag zu steigern.</de>
+        </text>
+    </l10n>
+</modDesc>
