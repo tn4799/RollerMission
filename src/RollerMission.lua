@@ -6,7 +6,7 @@ local RollerMission_mt = Class(RollerMission, AbstractFieldMission)
 
 InitObjectClass(RollerMission, "RollerMission")
 
-function RollerMission_mt.new(isServer, isClient, customMt)
+function RollerMission.new(isServer, isClient, customMt)
 	local self = AbstractFieldMission.new(isServer, isClient, customMt or PlowMission_mt)
 	self.workAreaTypes = {
 		[WorkAreaType.ROLLER] = true
@@ -40,7 +40,7 @@ function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlo
 	local fruitDesc = g_fruitTypeManager:getFruitTypeByIndex(fruitType)
 	local x, z = FieldUtil.getMeasurementPositionOfField(field)
 
-    if rollerFactor > 0 or fruitDesc == nil then
+    if rollerFactor == 0 or fruitDesc == nil then
         return false
     end
 
@@ -54,6 +54,7 @@ function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlo
 end
 
 function RollerMission:getData()
+	print("getData")
 	return {
 		location = string.format(g_i18n:getText("fieldJob_number"), self.field.fieldId),
 		jobType = g_i18n:getText("FieldJob_jobType_rolling"),
