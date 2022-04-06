@@ -4,7 +4,7 @@
         <group fieldSize="small">
             <vehicle filename="$data/vehicles/claas/arion600/arion600.xml" > <!-- tractor -->
                 <configuration name="motor" id="3"/>
-                <configuration name="wheel" id="TRELLEBORG_BROAD_WEIGHTS"/>
+                <configuration name="wheel" id="4"/>
             </vehicle>
             <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller -->
         </group>
@@ -22,7 +22,7 @@
         <group fieldSize="medium">
             <vehicle filename="$data/vehicles/caseIH/maxxum145CVX/maxxum145CVX.xml" >
                 <configuration name="motor" id="4"/>
-                <configuration name="wheel" id="TRELLEBORG_BROAD_WEIGHTS"/>
+                <configuration name="wheel" id="4"/>
             </vehicle>
             <vehicle filename="$data/vehicles/dalbo/powerRoll1230/powerRoll1230.xml" /> <!-- roller -->
         </group>
@@ -30,7 +30,7 @@
         <group fieldSize="medium">
             <vehicle filename="$data/vehicles/masseyFerguson/series8S/series8S.xml" >
                 <configuration name="motor" id="6"/>
-                <configuration name="wheel" id="TRELLEBORG_BROAD_WEIGHTS2"/>
+                <configuration name="wheel" id="6"/>
             </vehicle>
             <vehicle filename="$data/vehicles/tenwinkel/weight1500/weight1500.xml" />
             <vehicle filename="$data/vehicles/dalbo/megaRoll2430/megaRoll2430.xml" /> <!-- roller -->
