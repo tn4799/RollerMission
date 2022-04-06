@@ -6,4 +6,6 @@ function RegisterRollerMissionVehicles:loadMapFinished(node, arguments, callAsyn
     g_missionManager:loadMissionVehicles(RegisterRollerMissionVehicles.filename)
 end
 
-addModEventListener(RegisterRollerMissionVehicles)
+BaseMission.loadMapFinished = Utils.appendedFunction(BaseMission.loadMapFinished, RegisterRollerMissionVehicles.loadMapFinished)
+
+addConsoleCommand("gsFieldGenerateMission", "Force generating a new mission for given field", "consoleGenerateFieldMission", g_missionManager)
