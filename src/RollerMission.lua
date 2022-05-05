@@ -17,11 +17,18 @@ function RollerMission.new(isServer, isClient, customMt)
 	local groundTypeMapId, groundTypeFirstChannel, groundTypeNumChannels = self.mission.fieldGroundSystem:getDensityMapData(FieldDensityMap.ROLLER_LEVEL)
 	self.completionModifier = DensityMapModifier.new(groundTypeMapId, groundTypeFirstChannel, groundTypeNumChannels, self.mission.terrainRootNode)
 	self.completionFilter = DensityMapFilter.new(self.completionModifier)
-	local rollerValue = self.mission.fieldGroundSystem:getFieldGroundValue(FieldGroundType.ROLLED_SEEDBED)
+	local rollerValue = self.mission.fieldGroundSystem:getFieldGroundValue(FieldGroundType.ROLLER_LINES)
 
-	self.completionFilter:setValueCompareParams(DensityValueCompareType.EQUAL, rollerValue)
+	--source of problem:
+	self.completionFilter:setValueCompareParams(DensityValueCompareType.GREATER, 1)
 
 	return self
+end
+
+function RollerMission:resetField()
+	for i = 1, table.getn(self.field.maxFieldStatusPartitions) do
+		g_fieldManager:setFieldPartitionStatus(self.field, self.field.maxFieldStatusPartitions, i, self.field.fruitType, self.fieldState, 1, self.sprayFactor * self.sprayLevelMaxValue, self.fieldSpraySet, self.fieldPlowFactor * self.plowLevelMaxValue, self.weedState, self.limeFactor * self.limeLevelMaxValue)
+	end
 end
 
 function RollerMission:finish(...)
@@ -45,9 +52,7 @@ function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlo
         return false
     end
 
-    local area, _ = FieldUtil.getFruitArea(x - 1, z - 1, x + 1, z - 1, x - 1, z + 1, {}, {}, fruitType, 1, 1, 0, 0, 0, false)
-
-    if area > 0 and fruitDesc.needsRolling then
+    if fruitDesc.needsRolling and FieldUtil.getRollerFactor(field) > 0 then
         return true, FieldManager.FIELDSTATE_GROWING
     end
 
