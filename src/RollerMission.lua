@@ -17,10 +17,7 @@ function RollerMission.new(isServer, isClient, customMt)
 	local groundTypeMapId, groundTypeFirstChannel, groundTypeNumChannels = self.mission.fieldGroundSystem:getDensityMapData(FieldDensityMap.ROLLER_LEVEL)
 	self.completionModifier = DensityMapModifier.new(groundTypeMapId, groundTypeFirstChannel, groundTypeNumChannels, self.mission.terrainRootNode)
 	self.completionFilter = DensityMapFilter.new(self.completionModifier)
-	local rollerValue = self.mission.fieldGroundSystem:getFieldGroundValue(FieldGroundType.ROLLER_LINES)
-
-	--source of problem:
-	self.completionFilter:setValueCompareParams(DensityValueCompareType.GREATER, 1)
+	self.completionFilter:setValueCompareParams(DensityValueCompareType.EQUAL, 0)
 
 	return self
 end
@@ -31,16 +28,23 @@ function RollerMission:resetField()
 	end
 end
 
-function RollerMission:finish(...)
-    RollerMission:superClass().finish(self, ...)
-
-    self.field.fruitType = FruitType.UNKNOWN
-end
-
 function RollerMission:completeField()
-	for i = 1, table.getn(self.field.maxFieldStatusPartitions) do
-		g_fieldManager:setFieldPartitionStatus(self.field, self.field.maxFieldStatusPartitions, i, nil, FieldManager.FIELDSTATE_GROWING, 0, self.sprayFactor, self.fieldSpraySet, self.fieldPlowFactor)
+	print("complete field")
+	--set field completly to rolled
+	for i = 1, getNumOfChildren(self.field.fieldDimensions) do
+        local dimWidth = getChildAt(self.field.fieldDimensions, i - 1)
+        local dimStart = getChildAt(dimWidth, 0)
+        local dimHeight = getChildAt(dimWidth, 1)
+
+        local startX, _, startZ = getWorldTranslation(dimStart)
+        local widthX, _, widthZ = getWorldTranslation(dimWidth)
+        local heightX, _, heightZ = getWorldTranslation(dimHeight)
+
+		self.completionModifier:setParallelogramWorldCoords(startX, startZ, widthX, widthZ, heightX, heightZ, DensityCoordType.POINT_POINT_POINT)
+		print("set roller value to 0 for field dimension " .. i)
+		self.completionModifier:executeSet(0)
 	end
+	print("field completed")
 end
 
 function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlowFactor, limeFactor, maxWeedState, stubbleFactor, rollerFactor)
