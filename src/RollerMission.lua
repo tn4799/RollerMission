@@ -29,7 +29,6 @@ function RollerMission:resetField()
 end
 
 function RollerMission:completeField()
-	print("complete field")
 	--set field completly to rolled
 	for i = 1, getNumOfChildren(self.field.fieldDimensions) do
         local dimWidth = getChildAt(self.field.fieldDimensions, i - 1)
@@ -41,16 +40,13 @@ function RollerMission:completeField()
         local heightX, _, heightZ = getWorldTranslation(dimHeight)
 
 		self.completionModifier:setParallelogramWorldCoords(startX, startZ, widthX, widthZ, heightX, heightZ, DensityCoordType.POINT_POINT_POINT)
-		print("set roller value to 0 for field dimension " .. i)
 		self.completionModifier:executeSet(0)
 	end
-	print("field completed")
 end
 
 function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlowFactor, limeFactor, maxWeedState, stubbleFactor, rollerFactor)
     local fruitType = field.fruitType
 	local fruitDesc = g_fruitTypeManager:getFruitTypeByIndex(fruitType)
-	local x, z = FieldUtil.getMeasurementPositionOfField(field)
 
     if rollerFactor == 0 or fruitDesc == nil then
         return false
@@ -81,8 +77,7 @@ function RollerMission:partitionCompletion(x, z, widthX, widthZ, heightX, height
 end
 
 function RollerMission:validate(event)
-	print("validate: " .. tostring(event == FieldManager.FIELDEVENT_SOWN))
-    return event == FieldManager.FIELDEVENT_SOWN
+	return event == FieldManager.FIELDEVENT_SOWN
 end
 
 g_missionManager:registerMissionType(RollerMission, "roll")
