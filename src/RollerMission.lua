@@ -77,7 +77,8 @@ function RollerMission:partitionCompletion(x, z, widthX, widthZ, heightX, height
 end
 
 function RollerMission:validate(event)
-    return event == FieldManager.FIELDEVENT_SOWN or event == FieldManager.FIELDEVENT_GROWING
+	print("validate: " .. tostring(event == FieldManager.FIELDEVENT_SOWN))
+    return event == FieldManager.FIELDEVENT_SOWN
 end
 
 g_missionManager:registerMissionType(RollerMission, "roll")
