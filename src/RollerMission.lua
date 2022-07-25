@@ -18,6 +18,8 @@ function RollerMission.new(isServer, isClient, customMt)
 	self.completionModifier = DensityMapModifier.new(groundTypeMapId, groundTypeFirstChannel, groundTypeNumChannels, self.mission.terrainRootNode)
 	self.completionFilter = DensityMapFilter.new(self.completionModifier)
 	self.completionFilter:setValueCompareParams(DensityValueCompareType.EQUAL, 0)
+	self.groundTypeModifier = DensityMapModifier.new(groundTypeMapId, groundTypeFirstChannel, groundTypeNumChannels, self.mission.terrainRootNode)
+	self.rollerLinesType = g_currentMission.fieldGroundSystem:getFieldGroundValue(FieldGroundType.ROLLER_LINES)
 
 	return self
 end
@@ -40,7 +42,9 @@ function RollerMission:completeField()
         local heightX, _, heightZ = getWorldTranslation(dimHeight)
 
 		self.completionModifier:setParallelogramWorldCoords(startX, startZ, widthX, widthZ, heightX, heightZ, DensityCoordType.POINT_POINT_POINT)
+		self.groundTypeModifier:setParallelogramWorldCoords(startX, startZ, widthX, widthZ, heightX, heightZ, DensityCoordType.POINT_POINT_POINT)
 		self.completionModifier:executeSet(0)
+		self.groundTypeModifier:executeSet(self.rollerLines)
 	end
 end
 
