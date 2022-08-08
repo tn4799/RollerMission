@@ -42,10 +42,10 @@ function RollerMission:completeField()
         local heightX, _, heightZ = getWorldTranslation(dimHeight)
 
 		self.completionModifier:setParallelogramWorldCoords(startX, startZ, widthX, widthZ, heightX, heightZ, DensityCoordType.POINT_POINT_POINT)
-		self.groundTypeModifier:setParallelogramWorldCoords(startX, startZ, widthX, widthZ, heightX, heightZ, DensityCoordType.POINT_POINT_POINT)
 		self.completionModifier:executeSet(0)
-		self.groundTypeModifier:executeSet(self.rollerLines)
 	end
+
+	g_fieldManager:setFieldGround(self.field, FieldGroundType.ROLLER_LINES, 0, 0, self.sprayFactor * self.sprayLevelMaxValue, self.fieldPlowFactor * self.plowLevelMaxValue, self.weedState or 0, self.limeFactor * self.limeLevelMaxValue, self.stubbleFactor, false, false)
 end
 
 function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlowFactor, limeFactor, maxWeedState, stubbleFactor, rollerFactor)
