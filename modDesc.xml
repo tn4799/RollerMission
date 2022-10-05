@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="61">
+<modDesc descVersion="69">
     <author>tn4799</author>
     <version>1.0.0.0</version>
     <title>
@@ -16,6 +16,7 @@
     <extraSourceFiles>
         <sourceFile filename="src/RollerMission.lua"/>
         <sourceFile filename="src/RegisterRollerMissionVehicles.lua"/>
+        <sourceFile filename="src/RollerMissionGenerator.lua"/>
     </extraSourceFiles>
 
     <l10n>
