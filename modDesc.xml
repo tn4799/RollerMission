@@ -25,11 +25,11 @@
             <de>Walzen</de>
         </text>
         <text name="FieldJob_desc_action_rolling">
-			<en>for rolling/</en>
-			<de>zum Walzen</de>
+			<en>For rolling</en>
+			<de>Zum Walzen</de>
 		</text>
         <text name="FieldJob_desc_rolling">
-            <en>Roll field %d to compress the soil after seeding to increase the yield."</en>
+            <en>Roll field %d to compress the soil after seeding to increase the yield.</en>
             <de>Walze das Feld %d, um die Erde nach der Aussaat zu verdichten und dadurch den Ertrag zu steigern.</de>
         </text>
     </l10n>
