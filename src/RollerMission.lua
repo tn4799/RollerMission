@@ -1,5 +1,5 @@
 RollerMission = {
-    REWARD_PER_HA = 650
+    REWARD_PER_HA = 700
 }
 
 local RollerMission_mt = Class(RollerMission, AbstractFieldMission)
