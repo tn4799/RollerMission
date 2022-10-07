@@ -56,8 +56,9 @@ function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlo
         return false
     end
 
-    if fruitDesc.needsRolling and FieldUtil.getRollerFactor(field) > 0 then
-        return true, FieldManager.FIELDSTATE_GROWING
+	local currentGrowthState = FieldUtil.getMaxGrowthState(field, fruitType)
+	if fruitDesc.needsRolling and FieldUtil.getRollerFactor(field) > 0 and currentGrowthState == 1 then
+        return true, FieldManager.FIELDSTATE_GROWING, currentGrowthState
     end
 
     return false
