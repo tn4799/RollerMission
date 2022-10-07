@@ -8,4 +8,4 @@ end
 
 BaseMission.loadMapFinished = Utils.appendedFunction(BaseMission.loadMapFinished, RegisterRollerMissionVehicles.loadMapFinished)
 
-addConsoleCommand("gsFieldGenerateMission", "Force generating a new mission for given field", "consoleGenerateFieldMission", g_missionManager)
+--addConsoleCommand("gsFieldGenerateMission", "Force generating a new mission for given field", "consoleGenerateFieldMission", g_missionManager)
