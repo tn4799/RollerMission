@@ -69,4 +69,4 @@ function RollerMissionGenerator:startMission(startedMission, farmId, spawnVehicl
 end
 
 MissionManager.generateMissions = Utils.prependedFunction(MissionManager.generateMissions, RollerMissionGenerator.generateMissions)
---MissionManager.startMission = Utils.appendedFunction(MissionManager.startMission, RollerMissionGenerator.startMission)
+MissionManager.startMission = Utils.appendedFunction(MissionManager.startMission, RollerMissionGenerator.startMission)
