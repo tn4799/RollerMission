@@ -43,7 +43,7 @@ Für Supportanfragen und Verbesserungsvorschläge meldet euch bitte auf <a href=
         <text name="FieldJob_desc_action_rolling">
 			<en>For rolling</en>
 			<de>Zum Walzen</de>
-            <ru>за прикатывание</ru>
+			<ru>за прикатывание</ru>
 		</text>
         <text name="FieldJob_desc_rolling">
             <en>Roll field %d to compress the soil after seeding to increase the yield.</en>
