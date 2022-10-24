@@ -5,6 +5,7 @@
     <title>
         <en>Roller Missions</en>
         <de>Walzmissionen</de>
+        <ru>Передвижные миссии</ru>
     </title>
 
     <description>
@@ -13,14 +14,27 @@
 You earn about 700 $ per hectar of the field.
             
 Note:
-As roller missions share some generation properties with fertilizer missions those two missions are working against each other in the generation. So don't expect to always get roller missions. Which one will be generated is randomized.]]></en>
+As roller missions share some generation properties with fertilizer missions those two missions are working against each other in the generation. So don't expect to always get roller missions. Which one will be generated is randomized.
+
+For support and enhancement requests please open an issue over on <a href="https://github.com/tn4799/RollerMission/issues">Github</a>.]]></en>
 		<de>
 <![CDATA[Dieser Mod fügt Walzmissionen zu den Missionen hinzu. Walzenmissionen können nach dem Ansähen eines Feldes generiert werden.
 Man verdient in etwa 700 € pro Hektar des Feldes.
 
 Anmerkung:
 Da Walzmissionen einige Generierungseigenschaften mit Düngemissionen teilen, arbeiten diese beiden Missionen bei der Generierung gegeneinander. Erwarten Sie also nicht, dass Sie immer Walzmissionen erhalten. Welche Missionsart generiert wird, wird zufällig bestimmt.
-]]></de>
+
+Für Supportanfragen und Verbesserungsvorschläge meldet euch bitte auf <a href="https://github.com/tn4799/RollerMission/issues">Github</a> mit einem Issue. ]]></de>
+        <ru>
+<![CDATA[Этот мод добавляет в игру прокатные миссии. После засева поля можно создать переходящую миссию.
+Вы зарабатываете около 700 долларов за гектар поля.
+            
+Примечание:
+Поскольку прокатные миссии имеют некоторые общие производственные характеристики с контрактами на удобрения, эти две миссии работают друг против друга в производстве. Поэтому не стоит ожидать, что вы всегда будете получать прокатные миссии. Какой из них будет сгенерирован, определяется случайным образом.
+
+Для получения поддержки и запросов на улучшение, пожалуйста, откройте проблему на сайте <a href="https://github.com/tn4799/RollerMission/issues">Github</a>.]]></ru>
+
+was left wit
     </description>
     <iconFilename>modIcon.dds</iconFilename>
     <multiplayer supported="true"/>
@@ -34,14 +48,17 @@ Da Walzmissionen einige Generierungseigenschaften mit Düngemissionen teilen, ar
         <text name="FieldJob_jobType_rolling">
             <en>Rolling</en>
             <de>Walzen</de>
+            <ru>Ролики</ru>
         </text>
         <text name="FieldJob_desc_action_rolling">
 			<en>For rolling</en>
 			<de>Zum Walzen</de>
+            <ru>Для прокатки</ru>
 		</text>
         <text name="FieldJob_desc_rolling">
             <en>Roll field %d to compress the soil after seeding to increase the yield.</en>
             <de>Walze das Feld %d, um die Erde nach der Aussaat zu verdichten und dadurch den Ertrag zu steigern.</de>
+            <ru>Прикатайте поле %d, чтобы уплотнить почву после посева и повысить урожайность.</ru>
         </text>
     </l10n>
 </modDesc>
