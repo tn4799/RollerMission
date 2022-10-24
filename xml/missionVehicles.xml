@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <missionVehicles>
+    <variants/>
     <mission type="roll">
         <group fieldSize="small">
             <vehicle filename="$data/vehicles/claas/arion600/arion600.xml" > <!-- tractor -->
