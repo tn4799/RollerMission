@@ -45,7 +45,9 @@ function RollerMission:completeField()
 		self.completionModifier:executeSet(0)
 	end
 
-	g_fieldManager:setFieldGround(self.field, FieldGroundType.ROLLER_LINES, 0, 0, self.sprayFactor * self.sprayLevelMaxValue, self.fieldPlowFactor * self.plowLevelMaxValue, self.weedState or 0, self.limeFactor * self.limeLevelMaxValue, self.stubbleFactor, false, false)
+	for i = 1, table.getn(self.field.maxFieldStatusPartitions) do
+		g_fieldManager:setFieldPartitionStatus(self.field, self.field.maxFieldStatusPartitions, i, self.field.fruitType, self.fieldState, 1, self.sprayFactor * self.sprayLevelMaxValue, self.fieldSpraySet, self.fieldPlowFactor * self.plowLevelMaxValue, self.weedState, self.limeFactor * self.limeLevelMaxValue)
+	end
 end
 
 function RollerMission.canRunOnField(field, sprayFactor, fieldSpraySet, fieldPlowFactor, limeFactor, maxWeedState, stubbleFactor, rollerFactor)
