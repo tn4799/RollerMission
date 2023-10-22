@@ -6,6 +6,7 @@
         <en>Roller Missions</en>
         <de>Walzmissionen</de>
         <ru>Контракты На Прикатывание</ru>
+	<pl>Kontrakty na wałowanie</pl>
     </title>
 
     <description>
@@ -41,6 +42,17 @@ V1.0.0.1
 Поскольку контракты на прикатывание имеют некоторые общие свойства генерации с контрактами на внесение удобрений, эти две миссии работают друг против друга при генерации. Так что не ожидайте, что вы всегда будете получать контракт на прикатывание. Какой из них будет сгенерирован, определяется случайным образом.
 
 Для получения поддержки и запросов на улучшение, пожалуйста, откройте вопрос на <a href="https://github.com/tn4799/RollerMission/issues">Github</a>.]]></ru>
+	    <pl>
+<![CDATA[Ten mod dodaje misje wałowania do gry. Misja wałowania może być wygenerowana po posianiu pola.
+Zarabiasz około 700 $ za hektar pola.
+Uwaga:
+Ponieważ misje wałowania dzielą pewne właściwości generacyjne z misjami nawożenia, te dwie misje pracują przeciwko sobie podczas generacji. Nie oczekuj zawsze misji wałowania. Która zostanie wygenerowana jest losowa.
+
+Dla wsparcia i wniosków o ulepszenia, prosimy otworzyć zgłoszenie na <a href="https://github.com/tn4799/RollerMission/issues">Github</a>.
+
+Changelog:
+V1.0.0.1
+ - naprawiono błąd powodujący zapętlenie misji siewu i wałowania]]></pl>
     </description>
     <iconFilename>modIcon.dds</iconFilename>
     <multiplayer supported="true"/>
@@ -55,16 +67,19 @@ V1.0.0.1
             <en>Rolling</en>
             <de>Walzen</de>
             <ru>Прикатывание</ru>
+	    <pl>Wałowanie</pl>
         </text>
         <text name="FieldJob_desc_action_rolling">
 			<en>For rolling</en>
 			<de>Zum Walzen</de>
 			<ru>За прикатывание</ru>
+			<pl>Do wałowania</pl>
 		</text>
         <text name="FieldJob_desc_rolling">
             <en>Roll field %d to compress the soil after seeding to increase the yield.</en>
             <de>Walze das Feld %d, um die Erde nach der Aussaat zu verdichten und dadurch den Ertrag zu steigern.</de>
             <ru>Прикатайте поле %d, чтобы уплотнить почву после посева и повысить урожайность.</ru>
+	    <pl>Wałuj pole %d, aby ugnieść glebę po siewie i zwiększyć plon.</pl>
         </text>
     </l10n>
 </modDesc>
