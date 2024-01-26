@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="77">
+<modDesc descVersion="79">
     <author>tn4799</author>
     <version>1.0.0.1</version>
     <title>
         <en>Roller Missions</en>
         <de>Walzmissionen</de>
-        <ru>Контракты На Прикатывание</ru>
     </title>
 
     <description>
@@ -33,16 +32,8 @@ Für Supportanfragen und Verbesserungsvorschläge meldet euch bitte auf <a href=
 Changelog:
 V1.0.0.1
  - Fehler behoben, durch den Säh- und Walzmissionen sich immer abgewechselt haben]]></de>
-        <ru>
-<![CDATA[Этот мод добавляет в игру контракты на прикатывание. Контракт на прикатывание может сгенерироваться после того, как поле было засеяно.
-Вы заработаете около 700 $ с гектара поля.
-
-Примечание:
-Поскольку контракты на прикатывание имеют некоторые общие свойства генерации с контрактами на внесение удобрений, эти две миссии работают друг против друга при генерации. Так что не ожидайте, что вы всегда будете получать контракт на прикатывание. Какой из них будет сгенерирован, определяется случайным образом.
-
-Для получения поддержки и запросов на улучшение, пожалуйста, откройте вопрос на <a href="https://github.com/tn4799/RollerMission/issues">Github</a>.]]></ru>
     </description>
-    <iconFilename>modIcon.dds</iconFilename>
+    <iconFilename>icon_RollerMission.dds</iconFilename>
     <multiplayer supported="true"/>
     <extraSourceFiles>
         <sourceFile filename="src/RollerMission.lua"/>
